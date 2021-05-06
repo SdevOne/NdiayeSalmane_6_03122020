@@ -1,5 +1,5 @@
 import { photographer } from "./photographer.js";
-import { photographerPage } from "./photographerPage.js";
+import { photographerProfil } from "./photographerProfil.js";
 
 export class data {
   static getData() {
