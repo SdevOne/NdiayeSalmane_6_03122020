@@ -15,8 +15,21 @@ export class data {
     const allPhotographers = this.getData().then(function (data) {
       for (const photographersData of data.photographers) {
         let photographers = new photographer(photographersData);
-        photographers.setCard();
+        photographers.setPage();
       }
     });
   }
+
+  static getPhotographer(id) {
+    const onePhotographer = this.getData().then(function (data) {
+      for (const photographersData of data.photographers) {
+        if (id == photographersData.id) {
+          let photographerPage = new photographerProfil(photographersData);
+          photographerPage.setPage();
+        }
+      }
+    });
+  }
+
+  static getMedias(id) {}
 }
