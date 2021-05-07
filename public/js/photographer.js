@@ -37,8 +37,8 @@ export class photographer {
 
   setLink(portrait, name) {
     let link = document.createElement("a");
-    link.classList.add("photographers__identity");
-    link.setAttribute("href", /*name.textContent.replace(/\s+/g, "-")*/ "photographer_page.html");
+    link.classList.add("photographer__identity");
+    link.setAttribute("href", /*name.textContent.replace(/\s+/g, "-")*/ "photographer.html");
     link.setAttribute("aria-label", name.textContent);
     link.appendChild(portrait);
     link.appendChild(name);
@@ -47,43 +47,43 @@ export class photographer {
 
   setPortrait() {
     let portrait = document.createElement("img");
-    portrait.classList.add("photographers__portrait");
+    portrait.classList.add("photographer__portrait");
     portrait.setAttribute("src", "public/img/PhotographersIDPhotos/" + this.portrait);
-    portrait.setAttribute("alt", "Portrait de " + this.name);
+    portrait.setAttribute("alt", "");
     return portrait;
   }
 
   setName() {
     let name = document.createElement("h2");
-    name.classList.add("photographers__name");
+    name.classList.add("photographer__name");
     name.textContent = this.name;
     return name;
   }
 
   setLocation() {
     let location = document.createElement("p");
-    location.classList.add("photographers__location");
+    location.classList.add("photographer__location");
     location.textContent = this.city + ", " + this.country;
     return location;
   }
 
   setTagline() {
     let tagline = document.createElement("p");
-    tagline.classList.add("photographers__tagline");
+    tagline.classList.add("photographer__tagline");
     tagline.textContent = this.tagline;
     return tagline;
   }
 
   setPrice() {
     let price = document.createElement("p");
-    price.classList.add("photographers__price");
+    price.classList.add("photographer__price");
     price.textContent = this.price + "€/jour";
     return price;
   }
 
   setTags() {
     let tagContainer = document.createElement("div");
-    tagContainer.classList.add("photographers__tags");
+    tagContainer.classList.add("photographer__tags");
 
     let tagData = this.tags;
     for (let data of tagData) {
@@ -99,10 +99,10 @@ export class photographer {
     return tagContainer;
   }
 
-  setCard() {
-    let div = document.querySelector(".photographers");
+  setPage() {
+    let div = document.querySelector(".photographer");
     let card = document.createElement("div");
-    card.classList.add("photographers__profil");
+    card.classList.add("photographer__profil");
     card.appendChild(this.setLink(this.setPortrait(), this.setName()));
     card.appendChild(this.setLocation());
     card.appendChild(this.setTagline());
