@@ -1,2 +1,6 @@
-import { data } from "./data.js";
-data.getAllPhotographers();
+import { Data } from "./Data.js";
+import { Page } from "./Page.js";
+
+Page.setIndexPage();
+Page.mainLinkEvent();
+Data.getHomePhotographers();
