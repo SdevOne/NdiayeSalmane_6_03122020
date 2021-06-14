@@ -1,0 +1,11 @@
+@import "../utils/variables";
+.btn {
+  background-color: $color-primary;
+  border-radius: 0.5rem;
+  color: white;
+  &:hover {
+    background-color: $color-secondary;
+    color: black;
+    cursor: pointer;
+  }
+}

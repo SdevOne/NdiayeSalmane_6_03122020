@@ -1,0 +1,52 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.main-link {
+  width: 18rem;
+  height: 3rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: lighten($color-secondary, 10%);
+
+  & p {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+
+.header {
+  width: 95rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  margin-left: 10rem;
+
+  @include large-mobile {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    margin-left: 2rem;
+  }
+
+  &__logo {
+    width: 20rem;
+    height: 5rem;
+    margin-top: 0.5rem;
+
+    @include large-mobile {
+      width: 15rem;
+      height: 3.7rem;
+      margin: 3rem 0;
+    }
+  }
+}

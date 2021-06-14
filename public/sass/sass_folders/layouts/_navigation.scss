@@ -1,0 +1,26 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.nav-container {
+  margin-left: 10rem;
+
+  @include large-mobile {
+    margin: auto;
+  }
+  .nav ul {
+    width: 55rem;
+    display: flex;
+    flex-direction: row;
+
+    @include large-mobile {
+      width: 30rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .active {
+      background: $color-primary;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "./typography";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $primary-font;
+  font-size: 62.5%;
+  line-height: 1.6rem;
+}
+main {
+  position: relative;
+}
+
+h1,
+h2,
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.sr-only {
+  height: 0.1rem;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10000px;
+  width: 0.1rem;
+}

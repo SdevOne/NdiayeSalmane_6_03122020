@@ -1,0 +1,74 @@
+@import "../utils/mixins";
+
+.main-heading {
+  position: absolute;
+  top: -20.9rem;
+  right: 8rem;
+  font-size: 3.6rem;
+  line-height: 4.7rem;
+  color: $color-primary;
+
+  @include large-mobile {
+    top: -17.5rem;
+    right: 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+.photographers {
+  margin: 10rem 0 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  @include large-mobile {
+    margin: 4rem 0 0;
+  }
+
+  &__profil {
+    width: 40rem;
+    height: 38rem;
+    margin-bottom: 7rem;
+    text-align: center;
+
+    @include large-mobile {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  &__portrait {
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+    border-radius: 10rem;
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.25);
+  }
+  &__name {
+    width: 80%;
+    margin: 2rem auto 0.5rem;
+    color: $color-secondary;
+    font-size: 3.6rem;
+    line-height: 4.7rem;
+  }
+  &__location {
+    margin-bottom: 0.3rem;
+    color: $color-primary;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+  &__tagline {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+  }
+  &__price {
+    margin-bottom: 0.6rem;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    color: #757575;
+  }
+  &__tags {
+    display: flex;
+    justify-content: center;
+  }
+}
