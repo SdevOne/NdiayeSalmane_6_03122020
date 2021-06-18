@@ -96,6 +96,7 @@ export class Accessibility {
     document.querySelector("header").setAttribute("aria-hidden", "true");
     document.querySelector("main").setAttribute("aria-hidden", "true");
   }
+
   static removeAriaHidden() {
     document.querySelector("header").setAttribute("aria-hidden", "false");
     document.querySelector("main").setAttribute("aria-hidden", "false");
